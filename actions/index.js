@@ -40,6 +40,8 @@ export const Lasts = () => {
 }
 
 export const getLastPrice = (symbol) => {
+    console.log(symbol)
+
     return async (dispatch, getState, { socket }) => {
         const { company } = getState();
         const oldSymbol = company.info ? company.info.symbol.toLowerCase() : null;
